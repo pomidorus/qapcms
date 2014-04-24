@@ -1,0 +1,32 @@
+%header{style: 'background-color: #eee; padding: 20px 0px 20px 0px;'}
+  .container
+    .row
+      .span12{style: 'text-align:center;'}
+        %h1
+          %span{style: 'color:red;'}= 'QAP '
+          %span{style: 'color: #444;'}= 'CMS'
+
+
+.add_file_form{style: 'background-color: rgba(255,0,0,0.5); padding: 66px 0px 55px 0px;'}
+  .container
+    .row
+      .span12{style: 'text-align:center;'}
+        %p
+          %button.btn.btn-large.btn-success{type: "button", style: 'padding: 16px 18px 19px 15px; font-size:2em;'} Добавить файл
+
+
+.files
+  .container
+    .files_filter
+      .row
+        .span12
+          %ul.nav.nav-pills
+            %li.active
+              %a{href: '#'}
+                видеоматериалы
+            %li
+              %a{href: '#'}
+                исследования
+    .files_list_header
+    .files_list
+      .file

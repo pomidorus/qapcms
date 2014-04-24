@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: qapcms_dev
+  pool: 5
+  username: dev
+  password: testtest
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: qapcms_test
+  pool: 5
+  username: dev
+  password: testtest
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: qapcms_production
+  pool: 5
+  username: dev
+  password: testtest
+  host: localhost
+  port: 5432
