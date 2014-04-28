@@ -1,5 +1,7 @@
 Qapcms::Application.routes.draw do
 
+  post 'upload' => 'file_service#upload', as: :upload
+
   root "main#menu"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

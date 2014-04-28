@@ -11,13 +11,19 @@
   .container
     .row
       .span12{style: 'text-align:center;'}
-        %p
-          %button.btn.btn-large.btn-success{type: "button", style: 'padding: 16px 18px 19px 15px; font-size:2em;'} Добавить файл
-
+        %p{style: 'padding: 0px 0px 18px 0px;'}
+          Сервис хранения видеоматериалов и исследований
+        = form_tag upload_path, remote: true do
+          %p
+            %button#file_select.btn.btn-large.btn-success{type: "button", style: 'padding: 16px 18px 19px 15px; font-size:2em;'} Выберите файл
+          %p{style: 'display: none'}
+            = file_field_tag 'file', style: 'visibility: hidden; width: 0; height: 0;'
+          %p{style: 'display: none'}
+            = button_tag 'Загрузить', class: 'btn btn-large btn-success', style: 'visibility: hidden; width: 0; height: 0;'
 
 .files
   .container
-    .files_filter
+    .files_filter{style: 'padding: 33px 0px 0px 0px'}
       .row
         .span12
           %ul.nav.nav-pills
@@ -30,3 +36,16 @@
     .files_list_header
     .files_list
       .file
+
+    %table
+      %thead
+        %tr
+          %th
+          %th= 'тип файла'
+
+      %tbody
+        %tr
+          %td
+            %i.icon-play
+          %td= 'mp4'
+
