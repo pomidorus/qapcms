@@ -2,16 +2,18 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-FileUpload =
-  init: ->
-    $('#file_select').bind('click', (e) ->
-      $('#file').click()
-    )
+FileUploadService =
+
+  file_click: (event) ->
+    $('#file').click()
+
+  file_change: (event) ->
+    _name = event.target.files[0].name
+    $('#file_select').text(_name)
+    $('#load_button').css('display', '')
+
 
 jQuery ->
-  FileUpload.init()
-
-
-
-#document.querySelector('#fileSelect').addEventListener('click', function(e) {
-#document.querySelector('#fileElem').click();
+  $('#load_button').css('display', 'none')
+  $('#file_select').bind('click', (e) -> FileUploadService.file_click(e))
+  $('#file').bind('change', (e) -> FileUploadService.file_change(e))

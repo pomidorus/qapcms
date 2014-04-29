@@ -18,8 +18,8 @@
             %button#file_select.btn.btn-large.btn-success{type: "button", style: 'padding: 16px 18px 19px 15px; font-size:2em;'} Выберите файл
           %p{style: 'display: none'}
             = file_field_tag 'file', style: 'visibility: hidden; width: 0; height: 0;'
-          %p{style: 'display: none'}
-            = button_tag 'Загрузить', class: 'btn btn-large btn-success', style: 'visibility: hidden; width: 0; height: 0;'
+          %p#load_button
+            = button_tag 'Загрузить', class: 'btn'
 
 .files
   .container
